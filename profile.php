@@ -10,13 +10,13 @@
     
    // Database Handler is already present in authMiddleware
    if(isset($_POST["name"])){
-        print_r($_POST);
+        //print_r($_POST);
         $name = str_replace("'", "''", $_POST["name"]);
         $html = str_replace("'", "''", $_POST["html"]);
         $css = str_replace("'", "''", $_POST["css"]);
         $js = str_replace("'", "''", $_POST["js"]);
         $type = strtolower($_POST["type"]);
-        echo $type;
+        //echo $type;
     
 
 

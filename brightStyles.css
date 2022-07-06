@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+}
+
+*{
+    outline: none;
+}
+
+
+.less-faint{
+    color: #626465;
+    font-weight: 300;
+}
+
+
+
+.data{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1vh;
+}
+
+.constant{
+    font-weight: bolder;
+    background: grey;
+    color: white;
+    padding: 0.5em;
+    border-radius: 0.4rem;
+    font-size: 0.5em;
+}
+
+
+
+#typef{
+    background: none;
+    color: white;
+    margin-top: 2vmax;
+    border-radius: 1em;
+    padding: 0.3em;
+}
+
+
+#typef:focus{
+    color: rgb(42, 170, 33);
+ 
+ }
+
+#editor{
+    float:left;
+    width:50%;
+    height: 90vh;
+    border: 2px solid rgb(31, 27, 27);
+}
+#output{
+    float:left;
+    width:50%;
+    height: 90vh;
+    border: 2px solid rgb(31, 27, 27);
+    padding: 0.3%;
+    overflow: scroll;
+}
+
+textarea{
+    height: 90vh;
+    width: 99%;
+    background: rgba(128, 128, 128, 0.493);
+    /* color : white; */
+    resize: none;
+    outline: none;
+    font-family: Consolas,monaco,monospace;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+}   
+
+#canvas{
+    margin: 0;
+    width: 98%;
+    margin: auto;
+    /* background: yellow; */
+}
+
+.hidden{
+    display:none;
+    /* visibility: hidden; */
+}
+
+#buttons{
+    width: 100%;
+    height: fit-content;
+    background: #0d1721;
+    margin-bottom: 1vh;
+    padding: 1em;
+    box-sizing: border-box;
+
+
+}
+
+.btn{
+    background: #04AA6D;
+    color: black;
+    border: none;
+    border-radius: 2vmax;
+    color: white;
+    font-weight: bold;
+    /* padding: 1em; */
+    width: 8vw;
+    height: 4vh;
+    margin: 0 2vw;
+    font-size: 1vmax;
+}
+
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.active{
+    background: #01754b;
+    color: white;
+
+}
+
+
+#mode{
+    background: none;
+    border:none;
+    color: white;
+    filter: invert(1);
+    float: right;
+}
+
+
+#appname{
+    font-family:cursive ;
+    font-size: 1.6vmax;
+    color: white;
+
+}
+
+#copyBtn{
+    border: 2px solid black;
+    background: none;
+    position: absolute;
+    outline: none;
+    border-radius: 3em;
+    color: black;
+    padding: 0.3rem 0.8rem;
+    width: fit-content;
+    margin-top: 0.4vh;
+
+
+}
+
+
+#copyDiv{
+    color: black;
+    width: 96%;
+    display: flex;
+    justify-content:flex-end ;
+}
+
+#copyBtn:hover{
+    opacity: 0.8;
+
+}
+
+#slider{
+    position: fixed;
+    display: inline;
+    width: 25%;
+    height: 91.5vh;
+    background: #0d1721;
+    margin: 0;
+    transform: translate(-98%, -1.1vh);
+   /* display: flex;
+   flex-direction: column;
+   justify-content: center; */
+    transition: all 0.35s ease-in-out;
+}
+
+#slideBtn{
+    position:relative;
+    top: 15%;
+    left: 96%;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 100vmax;
+    margin: auto;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    background: #04AA6D;
+    transition: all 0.25s ease-in-out;
+}
+
+#slideContent{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40%;
+}
+
+#slideContent label{
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 5%;
+    color: white;
+}
+
+#projname{
+    width: 80%;
+    display: block;
+    background: none;
+    box-shadow: 0 0 1px 3px lightskyblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 2px;
+    text-align: center;
+}
+
+#saveProj{
+
+    margin-top: 5%;
+    color: white;
+    background: #04AA6D;
+    padding: 5px;
+    border-radius: 2px;
+
+}
+
+
+
+@media(max-width:700px){
+    #main{
+        /* background: yellow; */
+        width: 98%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #editor{
+        margin: 2%;
+        width: 96%;
+    }
+
+    #slider{
+        width: 40vw;
+    }
+
+    #output{
+        margin: 2%;
+        width: 96%;;
+    }
+
+    #buttons{
+        position: sticky;
+        top: 0;
+    }
+    
+}

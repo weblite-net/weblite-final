@@ -1,0 +1,56 @@
+#shrink{
+    transform: scale(0.8);
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.navigable:hover{
+    text-decoration: underline;
+}
+
+
+.centered-text{
+    text-align: center;
+}
+
+.space-left{
+    margin-left: 1vw;
+}
+
+.big{
+    font-size: 1.5rem;
+}
+
+.vertically-centered-text{
+    line-height: 5px;
+}
+
+#suggest .smallimg{
+    width: 5rem;
+    display: inline;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 1em;;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* background: #007a5c; */
+    background: linear-gradient(to bottom, #007a5c, #012e23);;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #04b186;
+    border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #019e77;
+}

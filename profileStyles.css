@@ -1,0 +1,261 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Utilities */
+
+.centered-text{
+    text-align: center;
+}
+
+.faint{
+    color: #959da6;
+    font-weight: lighter;
+}
+
+.undo-anchor{
+    text-decoration: none;
+    color: inherit;
+}
+
+.undo-anchor:hover{
+    text-decoration: underline;
+}
+
+#error-404{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+#profile{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+#profile-data{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#display-data{
+    border: 1px solid #30363d;
+    background: linear-gradient(to bottom, #007a5c, #012e23);
+    border-radius: 1em;
+    padding: 1em;
+    height: 75vh;
+    overflow-y: scroll;
+    
+
+}
+
+
+table{
+    /* width: 100%; */
+    font-size: 1.5rem;
+}
+
+/* section img{
+   
+    width: 18rem;
+    margin: 4vh;
+    margin-bottom: 2vh;
+} */
+
+
+#mainimg{ 
+    width: 18rem;
+    margin: 4vh;
+    margin-bottom: 2vh;
+} 
+
+
+#attr{
+    font-size: 0.05rem;
+}
+
+.error{
+    color: #db0c0c;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#projects{
+    color: white;
+    border-radius: 2em;
+    padding: 0.5rem;
+    
+}
+
+#projects td{
+    padding: 2vmax;
+    /* border: 1px solid #ffffff57; */
+}
+
+
+#link{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#link:hover{
+    /* color: rgb(0, 17, 255); */
+    text-decoration: underline;
+}
+
+#relations{
+    /* width: 100%;; */
+}
+
+#main-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem;
+    /* background: rgba(255, 0, 0, 0.45); */
+    padding: 2rem;
+}
+
+#misc-tab{
+    /* background: rgba(128, 128, 128, 0.652); */
+    width: fit-content;
+    height:fit-content ;
+    margin-left: 7rem ;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+#search-user{
+    width: fit-content;
+    padding: 2rem;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    margin-bottom: 4rem;
+    
+}
+
+#search-user form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#username-search{
+    width: 30rem;
+    border-radius: 1em;
+    border: none;
+    font-size: 1.3rem;
+    padding: 0.3rem;
+    padding-left: 0.7rem;
+    box-shadow: 0 0 1px 3px lightskyblue;
+    margin-bottom: 3rem;
+    
+
+}
+
+#suggest{
+    width: 100%;
+    /* height: fit-content; */
+    height: fit-content;
+    margin-top: 1rem;
+    /* background: #959da62a; */
+    border: 1px solid #30363d;
+    border-radius: 5px;
+}
+
+.suggested-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 94%;
+    padding: 1rem;
+    
+}
+
+.suggested-user span{
+    width: 30%;
+    text-align: center;
+}
+
+.suggested-user:active{
+    background: rgba(128, 128, 128, 0.227);
+}
+
+#relation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rel-btn{
+    width: 15rem;
+    margin: 1rem;
+    background: #04AA6D;
+    border-radius: 1em;
+    color: white;
+    padding: 0.4em;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+
+.rel-btn:hover{
+    opacity: 0.9;
+}
+
+
+.followers-icon{
+    display: inline;
+    fill: #d8d3d3;
+}
+
+@media(max-width: 1597px){
+    #main-data{
+        flex-direction: column;
+    }
+
+    #display-data{
+        margin: auto;
+        margin-bottom: 5rem;
+    }
+
+    #profile{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media(max-width: 1130px){
+    #profile{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main-data{
+        align-items: flex-start;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

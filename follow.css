@@ -1,0 +1,73 @@
+#page{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 4rem;
+}
+
+#followSection{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #30363d;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    display: inline;
+    margin-left: 5rem;
+    
+}
+
+.smallimg{
+    width: 5rem;
+    display: inline;
+}
+
+#followTab{
+    box-sizing: border-box;
+    width: 100%;
+    background: #3e3d3d30;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#followingEle, #followersEle{
+    padding: 1rem;
+    padding-right:10rem;
+    padding-left: 10rem;
+    width: fit-content;
+    display: inline;
+    border: 1px solid #30363d;
+}
+
+#displayUsers{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.suggested-user span{
+    width: 60%;
+    text-align: center;
+}
+
+.List{
+    transition: 0.3s all ease-in-out;
+}
+
+
+.active-tab{
+    background: #9d383830;
+}
+
+@media(max-width: 1247px){
+    #page{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #followSection{
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+    }
+}

@@ -209,6 +209,7 @@ table{
     margin: 1rem;
     background: #04AA6D;
     border-radius: 1em;
+    border: none;
     color: white;
     padding: 0.4em;
     font-size: 1.1rem;

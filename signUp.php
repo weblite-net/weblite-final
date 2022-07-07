@@ -70,7 +70,7 @@
         <h3>Signup</h3>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" onsubmit="return validate()" method="POST">
             <div class="formelements">
-	 		    <label for="name">Name:</label><br>
+	 		    <label for="name">User Name:</label><br>
 	 		    <input type="text" id="name" name="name" value="<?php echo isset($name) ? $name : ""?>" required/>
                 
                 <p id="1"><?php echo isset($error) ? $error : "" ?></p>

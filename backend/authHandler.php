@@ -36,7 +36,7 @@
             $result = $this->conn->checkRecordExistenceAndReturn($this->name);
             if($result){
                 $password = $result["password"];
-                echo "Authenticating <br/> $password";
+                //echo "Authenticating <br/> $password";
                 if(password_verify($this->password, $password)){
                     
                     return 1;

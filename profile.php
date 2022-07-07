@@ -10,13 +10,13 @@
     
    // Database Handler is already present in authMiddleware
    if(isset($_POST["name"])){
-        //print_r($_POST);
+        print_r($_POST);
         $name = str_replace("'", "''", $_POST["name"]);
         $html = str_replace("'", "''", $_POST["html"]);
         $css = str_replace("'", "''", $_POST["css"]);
         $js = str_replace("'", "''", $_POST["js"]);
         $type = strtolower($_POST["type"]);
-        //echo $type;
+        echo $type;
     
 
 
@@ -33,8 +33,7 @@
     $relationalData = $conn->select("SELECT followers, following from usermeta WHERE id = '$id';");
 
     
-    // $suggestResults = $conn->selectMany("SELECT users.name, users.email from users, usermeta where users.id = usermeta.id AND users.id!='$id' order by usermeta.followers desc LIMIT 3;");
-    $suggestResults = $conn->selectMany("SELECT users.name, users.email from users INNER JOIN usermeta ON users.id = usermeta.id AND users.id!='$id' order by usermeta.followers desc LIMIT 3;");
+    $suggestResults = $conn->selectMany("SELECT users.name, users.email from users, usermeta where users.id = usermeta.id AND users.id!='$id' order by usermeta.followers desc LIMIT 3;");
     // print_r($suggestResults->fetch_assoc());
 
     // while($row = mysqli_fetch_assoc($suggestResults)){
@@ -59,7 +58,32 @@
     <link rel="stylesheet" href="brightStyles.css">
     <link rel="stylesheet" href="profileStyles.css">
     <link rel="stylesheet" href="global.css">
-
+    <style>
+        #logout{
+            background: none;
+            border:none;
+            color: white;
+            float: right;
+            width: 8vw;
+            height: 4vh;
+            margin: 0 ;
+            font-size: 2vh;
+            padding-top: 1vh;
+            padding-left: 0px;
+        }
+        #new{
+            background: none;
+            border:none;
+            color: white;
+            float: right;
+            width: 10vw;
+            height: 4vh;
+            margin: 0;
+            font-size: 2vh;
+            padding-top: 1vh;
+            padding-right: 0px;
+        }
+    </style>
 </head>
 <body>
 
@@ -68,6 +92,8 @@
         <h3 style="display: inline" id="appname" onclick="location.href = 'index.html'">Weblite</h3>
        
         <!-- <span><?php echo $name ?? ""?></span> -->
+        <button type="button" id="logout" onclick="location.href = 'logout.php'">Logout</button>
+        <button type="button" id="new" onclick="location.href = 'app.php'">New Project</button>
         <button type="button" id="mode"><img src="brightness.png"/></button>
     </div>
 
@@ -102,10 +128,10 @@
                     <path fill-rule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z"></path>
                     </svg>
                     <span><?php echo $relationalData["followers"]?></span>
-                    <span class="less-faint navigable" onclick="location.href='follow.php?name=<?php echo base64_decode($id)?>'">followers</span>
+                    <span class="less-faint">followers</span>
                     <span class="">.</span>
                     <span><?php echo $relationalData["following"]?></span>
-                    <span class="less-faint navigable" onclick="location.href='follow.php?name=<?php echo base64_decode($id)?>'">following</span>
+                    <span class="less-faint">following</span>
                 </div>
             </div>
         </div>
